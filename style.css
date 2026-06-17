@@ -538,31 +538,38 @@ body:hover .eye-outline {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
     min-height: 60vh;
-    /* 중앙 정렬된 컨테이너(wireframe-container)를 무시하고 화면 왼쪽 끝으로 밀착시키는 코드 */
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    padding-left: 40px;
-    padding-right: 40px;
-    /* 화면 왼쪽 끝에서 살짝 떨어지는 여백 */
+    width: 100%;
     position: relative;
     overflow: hidden;
 }
 
 .slogan-block {
     display: flex;
+    width: 100%;
     margin-bottom: 30px;
+}
+
+#message .slogan-block:nth-child(1) {
+    justify-content: flex-start;
+}
+
+#message .slogan-block:nth-child(2) {
+    justify-content: center;
+}
+
+#message .slogan-block:nth-child(3) {
+    justify-content: flex-end;
 }
 
 .slogan {
     font-size: clamp(1.5rem, 6.8vw, 110px);
-    line-height: 1;
+    line-height: 1.15;
     letter-spacing: -2px;
     color: var(--win-white);
     opacity: 0;
     transform: translateY(50px);
-    text-align: left;
     white-space: nowrap;
 }
 
